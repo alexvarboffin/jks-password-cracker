@@ -1,4 +1,4 @@
-package com.walhalla.sdk.Utils;
+package org.walhalla;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

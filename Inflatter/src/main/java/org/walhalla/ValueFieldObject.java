@@ -1,4 +1,4 @@
-package com.walhalla.sdk.model;
+package org.walhalla;
 
 
 /**

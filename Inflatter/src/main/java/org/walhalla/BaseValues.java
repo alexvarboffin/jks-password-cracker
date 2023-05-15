@@ -1,7 +1,4 @@
-package com.walhalla.sdk.model;
-
-
-import com.walhalla.sdk.Utils.phUtils;
+package org.walhalla;
 
 /**
  * Created by combo on 29.07.2017.
