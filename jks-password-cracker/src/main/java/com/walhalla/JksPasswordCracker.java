@@ -20,7 +20,6 @@ public class JksPasswordCracker {
 
 
         KeyStore ks = KeyStore.getInstance("JKS");
-//
 //        for (String password : passwords) {
 //            try {
 //                FileInputStream fis = new FileInputStream(jksFile);

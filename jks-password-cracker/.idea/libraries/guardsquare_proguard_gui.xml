@@ -1,0 +1,53 @@
+<component name="libraryTable">
+  <library name="guardsquare.proguard.gui" type="repository">
+    <properties maven-id="com.guardsquare:proguard-gui:7.4.2" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/proguard-gui-7.4.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/proguard-base-7.4.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/proguard-core-9.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/kotlin-stdlib-1.8.20.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/annotations-13.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/kotlin-stdlib-common-1.8.20.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/kotlinx-metadata-jvm-0.6.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/kotlin-stdlib-jdk8-1.7.20.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/kotlin-stdlib-jdk7-1.7.20.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/gson-2.9.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/json-20220924.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/proguard-retrace-7.4.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/log4j-api-2.17.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/log4j-core-2.17.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/lib/proguard-gui-7.4.2-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/proguard-base-7.4.2-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/proguard-core-9.1.1-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/kotlin-stdlib-1.8.20-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/annotations-13.0-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/kotlin-stdlib-common-1.8.20-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/kotlinx-metadata-jvm-0.6.0-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/kotlin-stdlib-jdk8-1.7.20-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/kotlin-stdlib-jdk7-1.7.20-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/gson-2.9.0-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/json-20220924-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/proguard-retrace-7.4.2-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/log4j-api-2.17.1-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/log4j-core-2.17.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/proguard-gui-7.4.2-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/proguard-base-7.4.2-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/proguard-core-9.1.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/kotlin-stdlib-1.8.20-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/annotations-13.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/kotlin-stdlib-common-1.8.20-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/kotlinx-metadata-jvm-0.6.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/kotlin-stdlib-jdk8-1.7.20-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/kotlin-stdlib-jdk7-1.7.20-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/gson-2.9.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/json-20220924-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/proguard-retrace-7.4.2-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/log4j-api-2.17.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/log4j-core-2.17.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

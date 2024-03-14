@@ -1,6 +1,9 @@
 package com.walhalla;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.ByteArrayInputStream;
+import java.io.FileReader;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.security.KeyStore;
@@ -11,7 +14,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-public class PasswordChecker implements Runnable {
+public class PasswordChecker0 implements Runnable {
 
     private static volatile boolean passwordFound = false;
 
@@ -26,10 +29,10 @@ public class PasswordChecker implements Runnable {
 //    }
     byte[] keystoreBytes;
 
-    public PasswordChecker(String password, byte[] keystoreBytes, KeyStore ks) {
+    public PasswordChecker0(String password, byte[] keystoreBytes) throws KeyStoreException {
         this.password = password;
         this.keystoreBytes = keystoreBytes;
-        this.ks = ks;
+        this.ks = KeyStore.getInstance("JKS");;
     }
 
     @Override
@@ -37,7 +40,7 @@ public class PasswordChecker implements Runnable {
         try {
             //FileInputStream is = new FileInputStream(jksFile);
             //ks.load(is, password.toCharArray());
-            System.out.println(ks.hashCode());
+            //System.out.println(ks.hashCode());
             ks.load(new ByteArrayInputStream(keystoreBytes), password.toCharArray());
             System.out.println("Пароль найден: " + password);
             passwordFound = true;
@@ -56,12 +59,12 @@ public class PasswordChecker implements Runnable {
         String psw = "D:\\src\\jks-password-cracker\\src\\main\\resources\\passwords.txt";
 
         byte[] keystoreBytes = Files.readAllBytes(Paths.get(jksFile));
-        KeyStore ks = KeyStore.getInstance("JKS");
+
 
         BufferedReader reader = new BufferedReader(new FileReader(psw));
         String password;
         while ((password = reader.readLine()) != null&& !passwordFound) {
-            executor.execute(new PasswordChecker(password, keystoreBytes, ks));
+            executor.execute(new PasswordChecker0(password, keystoreBytes));
         }
         executor.shutdown();
         try {
