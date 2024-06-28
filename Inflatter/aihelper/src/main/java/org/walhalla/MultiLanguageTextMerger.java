@@ -20,6 +20,7 @@ import javafx.scene.input.ClipboardContent;
 public class MultiLanguageTextMerger extends Application {
 
     private TextArea textInput;
+    
 
     public static void main(String[] args) {
         launch(args);
