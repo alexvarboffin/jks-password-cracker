@@ -19,8 +19,11 @@ import javafx.scene.input.ClipboardContent;
 
 public class MultiLanguageTextMerger extends Application {
 
+    String s0 = "\"I am an experienced developer, no need to explain basics\" and a generic \"no yapping\"";
+
+
     private TextArea textInput;
-    
+
 
     public static void main(String[] args) {
         launch(args);
@@ -66,9 +69,17 @@ public class MultiLanguageTextMerger extends Application {
             }
         }
 
-        Button uniqueButton = new Button("::: Уникализация текста :::");
-        uniqueButton.setOnAction(e -> mergeText2());
-        vBox.getChildren().add(uniqueButton);
+        Button aaa1 = new Button("::: Уникализация текста :::");
+        aaa1.setOnAction(e -> mergeText2());
+        Button uniqueButton = new Button("::: Перепиши на viewbinding :::");
+        uniqueButton.setOnAction(e -> {
+            String selectedText = textInput.getText();
+            String mergedText = "Перепиши на Android viewbinding \n" + selectedText + "\n" + s0;
+
+            copyToClipboard(mergedText);
+        });
+
+        vBox.getChildren().addAll(aaa1, uniqueButton);
 
         VBox vbox = new VBox(10);
         vbox.setPadding(new Insets(10));
