@@ -33,7 +33,7 @@ import java.io.File;
 
 public class JksPasswordCrackerTest extends Application {
 
-    private Label statusLabel = new Label("Cracking in progress...");
+    private final Label statusLabel = new Label("Cracking in progress...");
     private Label jksFileLabel = new Label("JKS File: Not selected");
     private Label pswFileLabel = new Label("Password File: Not selected");
     private File jksFile;
