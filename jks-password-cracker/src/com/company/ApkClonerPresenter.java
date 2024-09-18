@@ -23,14 +23,14 @@ import java.util.Objects;
 
 //App Cloner ApkCloner
 
-public class ApkCloner {
+public class ApkClonerPresenter {
 
 
     private static final String _APKSIGNER = "C:\\android\\sdk\\build-tools\\34.0.0\\apksigner.bat";
     private final OutputCallback outputCallback;
 
 
-    public ApkCloner(OutputCallback outputCallback) {
+    public ApkClonerPresenter(OutputCallback outputCallback) {
         this.outputCallback = outputCallback;
     }
 

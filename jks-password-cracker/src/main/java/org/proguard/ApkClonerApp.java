@@ -1,30 +1,25 @@
 package main.java.org.proguard;
 
 
-import com.company.ApkCloner;
+import com.company.ApkClonerPresenter;
 import javafx.application.Application;
 import javafx.application.Platform;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
-import javafx.scene.paint.Color;
-import javafx.scene.text.Text;
-import javafx.scene.text.TextFlow;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
 
 import java.io.File;
 import java.util.prefs.Preferences;
 
-public class ApkClonerApp extends Application implements ApkCloner.OutputCallback {
+public class ApkClonerApp extends Application implements ApkClonerPresenter.OutputCallback {
     boolean ZIPALIGN = false;
     boolean SIGN = false;
     boolean BUILD = false;
     private static final String KEY_APK_PATH = "key0";
-    private ApkCloner ap;
+    private ApkClonerPresenter ap;
     private TextArea outputArea;
     private Preferences prefs;
     private String mm;
@@ -32,7 +27,7 @@ public class ApkClonerApp extends Application implements ApkCloner.OutputCallbac
 
 
     public ApkClonerApp() {
-        ap = new ApkCloner(this);
+        ap = new ApkClonerPresenter(this);
     }
 
     public static void main(String[] args) {
@@ -138,12 +133,9 @@ public class ApkClonerApp extends Application implements ApkCloner.OutputCallbac
             String path = pathInput.getText();
             int index = Integer.parseInt(indexInput.getText());
 
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    System.out.println(BUILD+""+SIGN+""+ZIPALIGN);
-                    ap.patchxmlRequest(path, index, BUILD, SIGN, ZIPALIGN);
-                }
+            new Thread(() -> {
+                System.out.println(BUILD+""+SIGN+""+ZIPALIGN);
+                ap.patchxmlRequest(path, index, BUILD, SIGN, ZIPALIGN);
             }).run();
         });
         GridPane.setConstraints(cloneButton, 1, 5);
